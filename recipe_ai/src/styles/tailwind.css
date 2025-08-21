@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Core Colors */
+    --color-background: #FEFCF8; /* cream */
+    --color-foreground: #2C2C2C; /* near-black */
+    --color-border: #E8E5E0; /* warm gray */
+    --color-input: #F5F2ED; /* light warm gray */
+    --color-ring: #2D5A27; /* deep forest green */
+    
+    /* Card Colors */
+    --color-card: #F5F2ED; /* light warm gray */
+    --color-card-foreground: #2C2C2C; /* near-black */
+    
+    /* Popover Colors */
+    --color-popover: #FEFCF8; /* cream */
+    --color-popover-foreground: #2C2C2C; /* near-black */
+    
+    /* Muted Colors */
+    --color-muted: #F5F2ED; /* light warm gray */
+    --color-muted-foreground: #6B6B6B; /* medium gray */
+    
+    /* Primary Colors */
+    --color-primary: #2D5A27; /* deep forest green */
+    --color-primary-foreground: #FFFFFF; /* white */
+    
+    /* Secondary Colors */
+    --color-secondary: #8B4513; /* warm saddle brown */
+    --color-secondary-foreground: #FFFFFF; /* white */
+    
+    /* Accent Colors */
+    --color-accent: #FF6B35; /* vibrant coral-orange */
+    --color-accent-foreground: #FFFFFF; /* white */
+    
+    /* Success Colors */
+    --color-success: #4CAF50; /* fresh green */
+    --color-success-foreground: #FFFFFF; /* white */
+    
+    /* Warning Colors */
+    --color-warning: #FF9800; /* warm amber */
+    --color-warning-foreground: #FFFFFF; /* white */
+    
+    /* Error/Destructive Colors */
+    --color-error: #E53E3E; /* controlled red */
+    --color-error-foreground: #FFFFFF; /* white */
+    --color-destructive: #E53E3E; /* controlled red */
+    --color-destructive-foreground: #FFFFFF; /* white */
+  }
+  .dark {
+    /* Core Colors - Dark */
+    --color-background: #0f1115; /* near-black */
+    --color-foreground: #eaeaea; /* near-white */
+    --color-border: #23262d; /* dark border */
+    --color-input: #161a20; /* dark input bg */
+    --color-ring: #6bd26b; /* brighter green ring */
+
+    /* Card Colors */
+    --color-card: #161a20;
+    --color-card-foreground: #eaeaea;
+
+    /* Popover Colors */
+    --color-popover: #0f1115;
+    --color-popover-foreground: #eaeaea;
+
+    /* Muted Colors */
+    --color-muted: #1b2027;
+    --color-muted-foreground: #a1a1aa;
+
+    /* Primary Colors */
+    --color-primary: #2D5A27; /* keep brand */
+    --color-primary-foreground: #FFFFFF;
+
+    /* Secondary Colors */
+    --color-secondary: #8B4513;
+    --color-secondary-foreground: #FFFFFF;
+
+    /* Accent Colors */
+    --color-accent: #FF6B35;
+    --color-accent-foreground: #FFFFFF;
+
+    /* Success/Warning/Error */
+    --color-success: #4CAF50;
+    --color-success-foreground: #FFFFFF;
+    --color-warning: #FF9800;
+    --color-warning-foreground: #FFFFFF;
+    --color-error: #EF4444;
+    --color-error-foreground: #FFFFFF;
+    --color-destructive: #EF4444;
+    --color-destructive-foreground: #FFFFFF;
+  }
+  
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer utilities {
+  .shadow-warm {
+    box-shadow: 0 2px 8px rgba(45, 90, 39, 0.08);
+  }
+  
+  .shadow-warm-md {
+    box-shadow: 0 4px 12px rgba(45, 90, 39, 0.12);
+  }
+  
+  .shadow-warm-lg {
+    box-shadow: 0 8px 24px rgba(45, 90, 39, 0.16);
+  }
+}
